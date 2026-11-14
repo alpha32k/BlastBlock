@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- "Oyun bitti" katmanı: tüm ekranı kaplayan yarı saydam zemin + ortada kart.
+     clickable/focusable: katman açıkken alttaki tahtaya dokunuş geçmesin. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bb_overlay"
+    android:clickable="true"
+    android:focusable="true"
+    tools:ignore="Overdraw">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/bb_screen_padding"
+        android:background="@drawable/ui_card"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/bb_screen_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/bb_button_spacing"
+            android:text="@string/game_over_title"
+            android:textColor="@color/bb_text_primary"
+            android:textSize="@dimen/bb_text_title"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/game_over_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bb_text_primary"
+            android:textSize="@dimen/bb_text_button"
+            tools:text="Skorun: 1234" />
+
+        <TextView
+            android:id="@+id/game_over_high_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bb_text_secondary"
+            android:textSize="@dimen/bb_text_label"
+            tools:text="Rekor: 5678" />
+
+        <TextView
+            android:id="@+id/game_over_new_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/bb_button_spacing"
+            android:text="@string/game_over_new_record"
+            android:textColor="@color/bb_amber"
+            android:textSize="@dimen/bb_text_button"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <!-- "En iyi 10'da N. sıra!": yalnız oyun listeye girdiyse görünür. -->
+        <TextView
+            android:id="@+id/game_over_top_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/bb_button_spacing"
+            android:gravity="center"
+            android:textColor="@color/bb_turquoise"
+            android:textSize="@dimen/bb_text_label"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:text="En iyi 10'da 3. sıra!"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/game_over_play_again"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bb_button_height"
+            android:layout_marginTop="@dimen/bb_screen_padding"
+            android:layout_marginBottom="@dimen/bb_button_spacing"
+            android:background="@drawable/ui_button_primary"
+            android:text="@string/game_over_play_again"
+            android:textAllCaps="false"
+            android:textColor="@color/bb_background"
+            android:textSize="@dimen/bb_text_button"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/game_over_menu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bb_button_height"
+            android:background="@drawable/ui_button_secondary"
+            android:text="@string/game_over_menu"
+            android:textAllCaps="false"
+            android:textColor="@color/bb_text_primary"
+            android:textSize="@dimen/bb_text_button" />
+    </LinearLayout>
+</FrameLayout>

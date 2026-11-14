@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Blast Block</string>
+    <string name="menu_new_game">New Game</string>
+    <string name="menu_continue">Continue</string>
+    <string name="menu_high_score">Best: %1$d</string>
+    <string name="menu_vibration_on">Vibration: On</string>
+    <string name="menu_vibration_off">Vibration: Off</string>
+    <string name="menu_logo_description">Blast Block logo</string>
+    <string name="menu_daily">Daily Puzzle</string>
+    <string name="menu_sound_on">Sound: On</string>
+    <string name="menu_sound_off">Sound: Off</string>
+    <string name="menu_save_check_failed">Couldn’t check the save. Try again in a moment.</string>
+
+    <string name="tutorial_title">Your First Move</string>
+    <string name="tutorial_instruction">Drag the block into the highlighted gap to complete the row.</string>
+    <string name="tutorial_success">You cleared the row! Full rows and columns disappear.</string>
+    <string name="tutorial_skip">Skip Tutorial</string>
+    <string name="tutorial_start">Start Playing</string>
+
+    <string name="daily_game_title">Daily Puzzle · %1$s</string>
+    <string name="daily_best_label">Daily Best</string>
+    <string name="daily_best_score">Daily best: %1$d</string>
+
+    <string name="game_score_label">Score</string>
+    <string name="game_high_score_label">Best</string>
+    <string name="game_streak">Streak x%1$d</string>
+    <string name="game_points_gained">+%1$d</string>
+    <string name="game_menu_button">Menu</string>
+    <string name="game_board_description">Game board</string>
+
+    <string name="game_over_title">Game Over</string>
+    <string name="game_over_score">Your score: %1$d</string>
+    <string name="game_over_high_score">Best: %1$d</string>
+    <string name="game_over_new_record">New record!</string>
+    <string name="game_over_play_again">Play Again</string>
+    <string name="game_over_menu">Main Menu</string>
+    <string name="fx_combo_lines">%1$d-Line Combo!</string>
+    <string name="fx_praise_great">Fantastic!</string>
+    <string name="fx_praise_amazing">Incredible!</string>
+    <string name="fx_streak_badge">Streak ×%1$d</string>
+    <string name="fx_new_record">New record!</string>
+    <string name="fx_board_clear">Board Cleared!</string>
+
+    <string name="menu_history">History</string>
+    <string name="scores_title">Best Scores</string>
+    <string name="scores_empty">No finished games yet.\nFinish your first game to see it here!</string>
+    <string name="scores_rank">%1$s.</string>
+    <string name="scores_points">%1$s points</string>
+    <string name="scores_date_format">MMM d, yyyy HH:mm</string>
+    <string name="scores_back">Back</string>
+    <string name="scores_load_failed">Couldn’t load the scores.</string>
+    <string name="game_over_top_rank">Ranked #%1$d on the leaderboard!</string>
+    <string name="scores_classic">Classic</string>
+    <string name="scores_previous">Previous</string>
+    <string name="scores_next">Next</string>
+    <string name="scores_retry">Try Again</string>
+    <string name="error_invalid_save">Couldn’t read your save. A new game was started.</string>
+    <string name="error_save_failed">Couldn’t save your game.</string>
+    <string name="error_load_failed">Couldn’t load your game.</string>
+</resources>

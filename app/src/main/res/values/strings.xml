@@ -1,0 +1,70 @@
+<resources>
+    <!-- Uygulamadaki tüm metinler (Türkçe). Kodda metin yazılmaz, buradan okunur. -->
+    <string name="app_name">Blast Block</string>
+
+    <!-- Ana menü -->
+    <string name="menu_new_game">Yeni Oyun</string>
+    <string name="menu_continue">Devam Et</string>
+    <string name="menu_high_score">Rekor: %1$d</string>
+    <string name="menu_vibration_on">Titreşim: Açık</string>
+    <string name="menu_vibration_off">Titreşim: Kapalı</string>
+    <string name="menu_logo_description">Blast Block logosu</string>
+    <string name="menu_daily">Günlük Bulmaca</string>
+    <string name="menu_sound_on">Ses: Açık</string>
+    <string name="menu_sound_off">Ses: Kapalı</string>
+    <string name="menu_save_check_failed">Kayıt kontrol edilemedi. Birazdan tekrar dene.</string>
+
+    <string name="tutorial_title">İlk Hamlen</string>
+    <string name="tutorial_instruction">Satırı tamamlamak için alttaki bloğu işaretli boşluğa sürükle.</string>
+    <string name="tutorial_success">Satırı temizledin! Dolu satırlar ve sütunlar silinir.</string>
+    <string name="tutorial_skip">Öğreticiyi Atla</string>
+    <string name="tutorial_start">Oyuna Başla</string>
+
+    <string name="daily_game_title">Günlük Bulmaca · %1$s</string>
+    <string name="daily_best_label">Günün Rekoru</string>
+    <string name="daily_best_score">Günün rekoru: %1$d</string>
+
+    <!-- Oyun ekranı -->
+    <string name="game_score_label">Skor</string>
+    <string name="game_high_score_label">Rekor</string>
+    <string name="game_streak">Seri x%1$d</string>
+    <string name="game_points_gained">+%1$d</string>
+    <string name="game_menu_button">Menü</string>
+    <string name="game_board_description">Oyun tahtası</string>
+
+    <!-- Oyun bitti -->
+    <string name="game_over_title">Oyun Bitti</string>
+    <string name="game_over_score">Skorun: %1$d</string>
+    <string name="game_over_high_score">Rekor: %1$d</string>
+    <string name="game_over_new_record">Yeni rekor!</string>
+    <string name="game_over_play_again">Tekrar Oyna</string>
+    <string name="game_over_menu">Ana Menü</string>
+
+    <!-- v1.1: efekt yazıları -->
+    <string name="fx_combo_lines">%1$d Çizgi Kombo!</string>
+    <string name="fx_praise_great">Muhteşem!</string>
+    <string name="fx_praise_amazing">İnanılmaz!</string>
+    <string name="fx_streak_badge">Seri ×%1$d</string>
+    <string name="fx_new_record">Yeni rekor!</string>
+    <string name="fx_board_clear">Tahta Temiz!</string>
+
+    <!-- Oyun geçmişi -->
+    <string name="menu_history">Geçmiş</string>
+    <string name="scores_title">En İyi Puanlar</string>
+    <string name="scores_empty">Henüz bitmiş oyun yok.\nİlk oyununu bitir, burada görünsün!</string>
+    <string name="scores_rank">%1$s.</string>
+    <string name="scores_points">%1$s puan</string>
+    <string name="scores_date_format">dd.MM.yyyy HH:mm</string>
+    <string name="scores_back">Geri</string>
+    <string name="scores_load_failed">Skor listesi okunamadı.</string>
+    <string name="game_over_top_rank">Puan sıralamasında %1$d. sıra!</string>
+    <string name="scores_classic">Klasik</string>
+    <string name="scores_previous">Önceki</string>
+    <string name="scores_next">Sonraki</string>
+    <string name="scores_retry">Tekrar Dene</string>
+
+    <!-- Hata ve bilgi mesajları -->
+    <string name="error_invalid_save">Kayıtlı oyun okunamadı, yeni bir oyun başlatıldı.</string>
+    <string name="error_save_failed">Oyun kaydedilemedi.</string>
+    <string name="error_load_failed">Oyun yüklenemedi.</string>
+</resources>

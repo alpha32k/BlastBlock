@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Blast Block renk paleti: gece mavisi zemin üzerinde neon tonlar. -->
+<resources>
+    <!-- Zemin ve yüzeyler -->
+    <color name="bb_background">#FF0B1230</color>
+    <color name="bb_surface">#FF151E45</color>
+    <color name="bb_board">#FF111940</color>
+    <color name="bb_board_cell">#FF1C2656</color>
+    <color name="bb_board_line">#FF27326A</color>
+    <color name="bb_overlay">#CC070B20</color>
+
+    <!-- Metin -->
+    <color name="bb_text_primary">#FFFFFFFF</color>
+    <color name="bb_text_secondary">#FFA9B4E0</color>
+
+    <!-- Blok renkleri (renk kimliği 1..5 sırasıyla) -->
+    <color name="bb_turquoise">#FF2EE6D6</color>
+    <color name="bb_coral">#FFFF6B6B</color>
+    <color name="bb_amber">#FFFFC145</color>
+    <color name="bb_violet">#FFA66BFF</color>
+    <color name="bb_mint">#FF5CF29A</color>
+
+    <!-- Önizleme ve vurgu -->
+    <color name="bb_preview_valid">#662EE6D6</color>
+    <color name="bb_preview_invalid">#66FF4D6D</color>
+    <color name="bb_line_highlight">#55FFFFFF</color>
+
+    <!-- v1.1: efektler -->
+    <color name="bb_fx_glow">#CCFFFFFF</color>
+    <color name="bb_fx_text_shadow">#AA000000</color>
+    <color name="bb_turquoise_pressed">#FF1FA89C</color>
+
+    <!-- Uygulama ikonunun arka planı -->
+    <color name="bb_icon_background">#FF000432</color>
+
+    <color name="white">#FFFFFFFF</color>
+</resources>

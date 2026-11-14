@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ana menü: tam ekran arka plan görseli, üstte logo, ortada rekor ve düğmeler. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.MenuActivity"
+    tools:ignore="MergeRootFrame">
+
+    <!-- Arka plan sistem çubuklarının altına kadar uzanır (centerCrop: oranı bozmadan doldurur). -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bb_menu_background" />
+
+    <!-- İçerik: sistem çubuğu boşlukları (insets) koddan padding olarak eklenir. -->
+    <ScrollView
+        android:id="@+id/menu_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/bb_screen_padding">
+
+            <ImageView
+                android:id="@+id/menu_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/bb_screen_padding"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/menu_logo_description"
+                android:maxWidth="@dimen/bb_logo_max_width"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bb_logo" />
+
+            <TextView
+                android:id="@+id/menu_high_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/bb_screen_padding"
+                android:textColor="@color/bb_amber"
+                android:textSize="@dimen/bb_text_button"
+                android:textStyle="bold"
+                tools:text="Rekor: 1234" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/menu_classic"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bb_button_height"
+                android:layout_marginBottom="@dimen/bb_button_spacing"
+                android:background="@drawable/ui_button_primary"
+                android:text="@string/menu_new_game"
+                android:textAllCaps="false"
+                android:textColor="@color/bb_background"
+                android:textSize="@dimen/bb_text_button"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/menu_daily"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bb_button_height"
+                android:layout_marginBottom="@dimen/bb_button_spacing"
+                android:background="@drawable/ui_button_secondary"
+                android:text="@string/menu_daily"
+                android:textAllCaps="false"
+                android:textColor="@color/bb_amber"
+                android:textSize="@dimen/bb_text_button"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/menu_history"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bb_button_height"
+                android:layout_marginBottom="@dimen/bb_button_spacing"
+                android:background="@drawable/ui_button_secondary"
+                android:text="@string/menu_history"
+                android:textAllCaps="false"
+                android:textColor="@color/bb_text_primary"
+                android:textSize="@dimen/bb_text_button"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/menu_sound"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/bb_button_spacing"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/bb_button_height"
+                    android:background="@drawable/ui_button_secondary"
+                    android:text="@string/menu_sound_on"
+                    android:textAllCaps="false"
+                    android:textColor="@color/bb_text_secondary"
+                    android:textSize="@dimen/bb_text_label" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/menu_vibration"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/bb_button_height"
+                    android:background="@drawable/ui_button_secondary"
+                    android:text="@string/menu_vibration_on"
+                    android:textAllCaps="false"
+                    android:textColor="@color/bb_text_secondary"
+                    android:textSize="@dimen/bb_text_label" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

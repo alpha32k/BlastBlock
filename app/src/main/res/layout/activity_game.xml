@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Oyun ekranı: üstte skor bilgileri ve Menü düğmesi, altında tahta+tepsi (GameView).
+     En üstte, gerektiğinde görünen "Oyun bitti" katmanı ve yükleme göstergesi bulunur. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.GameActivity"
+    tools:ignore="MergeRootFrame">
+
+    <!-- Oyun içeriği: sistem çubuğu boşlukları (insets) koddan padding olarak eklenir. -->
+    <LinearLayout
+        android:id="@+id/game_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Üst çubuk: solda Menü düğmesi, ortada esnek boşluk, sağda rekor.
+             Yatay LinearLayout + center_vertical: iki taraf da kendi yüksekliğini alır ve
+             birbirine göre ortalanır; RelativeLayout'taki gibi üstten kırpılma olmaz. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/bb_screen_padding"
+            android:paddingTop="@dimen/bb_button_spacing"
+            android:paddingEnd="@dimen/bb_screen_padding">
+
+            <!-- minHeight 48dp: parmakla rahat dokunulabilecek en küçük alan. -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/game_menu_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ui_button_secondary"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:paddingStart="@dimen/bb_screen_padding"
+                android:paddingTop="@dimen/bb_button_spacing"
+                android:paddingEnd="@dimen/bb_screen_padding"
+                android:paddingBottom="@dimen/bb_button_spacing"
+                android:text="@string/game_menu_button"
+                android:textAllCaps="false"
+                android:textColor="@color/bb_text_primary"
+                android:textSize="@dimen/bb_text_label" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/bb_button_spacing"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/game_high_score_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/game_high_score_label"
+                    android:textColor="@color/bb_text_secondary"
+                    android:textSize="@dimen/bb_text_label" />
+
+                <TextView
+                    android:id="@+id/game_high_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/bb_amber"
+                    android:textSize="@dimen/bb_text_button"
+                    android:textStyle="bold"
+                    tools:text="1234" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/game_daily_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/bb_amber"
+            android:textSize="@dimen/bb_text_label"
+            android:visibility="gone" />
+
+        <!-- Skor (büyük) ve seri göstergesi. -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/game_score_label"
+            android:textColor="@color/bb_text_secondary"
+            android:textSize="@dimen/bb_text_label" />
+
+        <TextView
+            android:id="@+id/game_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/bb_text_primary"
+            android:textSize="@dimen/bb_text_score"
+            android:textStyle="bold"
+            tools:text="290" />
+
+        <TextView
+            android:id="@+id/game_streak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/bb_coral"
+            android:textSize="@dimen/bb_text_label"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            tools:text="Seri x2"
+            tools:visibility="visible" />
+
+        <!-- Tahta ve tepsi: kalan tüm yükseklik. Ölçek GameView içinde hesaplanır. -->
+        <com.blastblock.game.presentation.ui.GameView
+            android:id="@+id/game_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/game_board_description" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/game_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/bb_turquoise"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/game_over_overlay"
+        layout="@layout/overlay_game_over"
+        android:visibility="gone" />
+</FrameLayout>

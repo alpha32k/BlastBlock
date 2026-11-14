@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/bb_button_spacing"
+    android:background="@drawable/ui_card"
+    android:baselineAligned="false"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/bb_button_height"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/bb_screen_padding"
+    android:paddingTop="@dimen/bb_button_spacing"
+    android:paddingEnd="@dimen/bb_screen_padding"
+    android:paddingBottom="@dimen/bb_button_spacing">
+
+    <!-- Sıra numarası; rengi koddan verilir (1-3 vurgulu). -->
+    <TextView
+        android:id="@+id/score_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minEms="2"
+        android:textColor="@color/bb_text_secondary"
+        android:textSize="@dimen/bb_text_button"
+        android:textStyle="bold"
+        tools:text="1." />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/bb_button_spacing"
+        android:layout_marginEnd="@dimen/bb_button_spacing"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/score_points"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bb_text_primary"
+            android:textSize="@dimen/bb_text_button"
+            android:textStyle="bold"
+            tools:text="12.345 puan" />
+
+        <TextView
+            android:id="@+id/score_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bb_text_secondary"
+            android:textSize="@dimen/bb_text_label"
+            tools:text="@string/scores_classic" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/score_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/bb_text_secondary"
+        android:textSize="@dimen/bb_text_label"
+        tools:text="08.11.2026 14:30" />
+</LinearLayout>

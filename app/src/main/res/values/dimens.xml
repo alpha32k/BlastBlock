@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ortak ölçüler. -->
+<resources>
+    <dimen name="bb_screen_padding">16dp</dimen>
+    <dimen name="bb_button_height">56dp</dimen>
+    <dimen name="bb_button_corner">16dp</dimen>
+    <dimen name="bb_button_spacing">12dp</dimen>
+    <dimen name="bb_text_title">32sp</dimen>
+    <dimen name="bb_text_score">28sp</dimen>
+    <dimen name="bb_text_label">14sp</dimen>
+    <dimen name="bb_text_button">18sp</dimen>
+    <dimen name="bb_logo_max_width">320dp</dimen>
+</resources>

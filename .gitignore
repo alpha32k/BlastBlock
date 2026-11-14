@@ -1,0 +1,19 @@
+﻿# Android / Gradle
+.gradle/
+build/
+app/build/
+local.properties
+.idea/
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+# İmza anahtarları ve gizli bilgiler
+*.jks
+*.keystore
+keystore.properties
+.env
+# İç çalışma dosyaları
+.ai/
+# Teslim çıktıları
+dist/

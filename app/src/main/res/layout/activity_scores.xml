@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scores_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.ScoresActivity"
+    tools:ignore="MergeRootFrame">
+
+    <!-- Arka plan sistem çubuklarının altına kadar uzanır (centerCrop: oranı bozmadan doldurur). -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bb_menu_background" />
+
+    <!-- İçerik: sistem çubuğu boşlukları (insets) koddan padding olarak eklenir. -->
+    <LinearLayout
+        android:id="@+id/scores_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/bb_screen_padding">
+
+        <TextView
+            android:id="@+id/scores_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/bb_screen_padding"
+            android:gravity="center"
+            android:text="@string/scores_title"
+            android:textColor="@color/bb_text_primary"
+            android:textSize="@dimen/bb_text_title"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:id="@+id/scores_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/scores_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <!-- Liste boşsa ya da okunamadıysa gösterilen bilgi metni (liste yerine). -->
+        <TextView
+            android:id="@+id/scores_message"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/bb_text_secondary"
+            android:textSize="@dimen/bb_text_button"
+            android:visibility="gone"
+            tools:text="@string/scores_empty" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/scores_previous"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/bb_button_spacing"
+                android:layout_weight="1"
+                android:background="@drawable/ui_button_secondary"
+                android:minHeight="48dp"
+                android:text="@string/scores_previous"
+                android:textAllCaps="false"
+                android:textColor="@color/bb_text_primary"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/scores_next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ui_button_secondary"
+                android:minHeight="48dp"
+                android:text="@string/scores_next"
+                android:textAllCaps="false"
+                android:textColor="@color/bb_text_primary"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/scores_retry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ui_button_secondary"
+            android:minHeight="48dp"
+            android:text="@string/scores_retry"
+            android:textAllCaps="false"
+            android:textColor="@color/bb_text_primary"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/scores_back"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bb_button_height"
+            android:layout_marginTop="@dimen/bb_screen_padding"
+            android:background="@drawable/ui_button_secondary"
+            android:text="@string/scores_back"
+            android:textAllCaps="false"
+            android:textColor="@color/bb_text_primary"
+            android:textSize="@dimen/bb_text_button"
+            android:textStyle="bold" />
+    </LinearLayout>
+</FrameLayout>

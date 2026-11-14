@@ -1,0 +1,6 @@
+# Unix betikleri her zaman LF satır sonuyla saklanır (Linux/macOS'ta çalışabilsin diye).
+gradlew text eol=lf
+*.bat text eol=crlf
+*.jar binary
+*.png binary
+*.webp binary

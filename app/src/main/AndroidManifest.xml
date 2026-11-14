@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Parça yerleştirme ve satır silmede kısa titreşim için gerekli izin. -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- BlastBlockApplication: uygulama açılınca bağımlılıkları (AppContainer) bir kez kurar. -->
+    <application
+        android:name=".BlastBlockApplication"
+        android:allowBackup="true"
+        android:appCategory="game"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:localeConfig="@xml/locales_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BlastBlock"
+        tools:targetApi="31">
+
+        <!-- Ana menü: uygulamanın açılış ekranı. -->
+        <activity
+            android:name=".presentation.ui.MenuActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- En iyi 10 oyun listesi. -->
+        <activity
+            android:name=".presentation.ui.ScoresActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Oyun ekranı: tahta, parçalar ve skor. -->
+        <activity
+            android:name=".presentation.ui.TutorialActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".presentation.ui.GameActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

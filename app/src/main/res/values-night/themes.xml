@@ -1,0 +1,12 @@
+<resources>
+    <!-- Oyun her zaman koyu temadadır; gece modunda da aynı tema kullanılır. -->
+    <style name="Base.Theme.BlastBlock" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/bb_turquoise</item>
+        <item name="colorSecondary">@color/bb_coral</item>
+        <item name="colorOnPrimary">@color/bb_background</item>
+        <item name="android:colorBackground">@color/bb_background</item>
+        <item name="android:windowBackground">@color/bb_background</item>
+        <item name="android:statusBarColor">@color/bb_background</item>
+        <item name="android:navigationBarColor">@color/bb_background</item>
+    </style>
+</resources>
