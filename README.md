@@ -42,6 +42,10 @@ APK, `app/build/outputs/apk/debug/` klasörüne yazılır. Java projesi üç mod
 - [Mimari](docs/MIMARI.md)
 - [Derleme ve kurulum rehberi](docs/DERLEME_VE_KURULUM.md)
 
+### Lisans
+
+Bu proje [MIT Lisansı](LICENSE) ile yayımlanır.
+
 ---
 
 ## English
@@ -76,3 +80,7 @@ The APK is written to `app/build/outputs/apk/debug/`. The Java project has three
 - [Game rules and project overview (Turkish)](docs/PROJE_ACIKLAMASI.md)
 - [Architecture (Turkish)](docs/MIMARI.md)
 - [Build and installation guide (Turkish)](docs/DERLEME_VE_KURULUM.md)
+
+### License
+
+This project is released under the [MIT License](LICENSE).
