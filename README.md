@@ -2,8 +2,6 @@
 
 [Türkçe](#türkçe) · [English](#english)
 
-**[Android APK · GitHub Releases](https://github.com/alpha32k/BlastBlock/releases/latest)**
-
 <p align="center">
   <img src="docs/screenshots/tutorial.png" alt="İlk hamle öğreticisi / First move tutorial" width="260">
   <img src="docs/screenshots/daily.png" alt="Günlük bulmaca / Daily puzzle" width="260">
